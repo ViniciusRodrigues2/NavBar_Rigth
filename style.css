@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+width: 30px;
+transition: all .3s ease-in;
+}
+
+body{
+background-color: #1b1b1b;
+min-width: 100vw;
+min-height: 100vh;
+overflow-x: hidden;
+}
+
+.container{
+display: flex;
+background-color: #161616;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+position: relative;
+height: 15vh;
+}
+
+.container .logo{
+padding: 0 0 0 20px;
+}
+
+.container .logo h2{
+color: whitesmoke;
+font-size: 1.8em;
+text-transform: uppercase;
+font-weight: 800;
+}
+.container .burguer{
+    padding-right: 20px;
+    cursor: pointer;
+}
+.container .menu-nav{
+    position: absolute;
+    right: 0;   
+    top: 15vh;
+    min-height: 80vh;
+    overflow: hidden;
+    transform: translateX(1450px);
+    transition: all .6s ease-in-out;
+}
+.container .menu-nav .menu-container-itens{
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    display: block;
+    list-style: none;
+    width: 100vw;
+}
+.container .alterar-cor{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container .menu-nav .menu-container-itens li{
+  padding: 2rem 2.2rem;  
+}
+.container .menu-nav .menu-container-itens li a{
+    color: #dfdfdf;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container .menu-nav.visible{
+    position: absolute;
+    right: 0;   
+    top: 15vh;
+    transform: translateX(0);
+}
+
+
+
+
+
+body.mudarCor{
+    background-color: whitesmoke;
+    transition: all .3s ease-in-out;
+}
+
+body.mudarCor .container{
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 20px #161616;
+    transition: all .3s ease-in-out;
+}
+
+body.mudarCor .container .logo h2{
+    color: #161616;
+    transition: all .3s ease-in-out;
+}
+body.mudarCor .container .alterar-cor{
+    background: #1b1b1b;
+    transition: all .3s ease-in-out;
+}
+body.mudarCor .container .menu-nav .menu-container-itens{
+    background-color: rgb(221, 221, 221);
+    transition: all .3s ease-in-out;
+}
+body.mudarCor .container .menu-nav .menu-container-itens li a{
+    color: #161616;
+    transform: all .3s ease-in-out;
+}
